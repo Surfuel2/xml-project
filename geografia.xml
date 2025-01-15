@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE geografia [
+   <!ELEMENT geografia (paises, ciudades)>
+   <!ELEMENT paises (pais)*>
+      <!ELEMENT pais (#PCDATA)>
+         <!ATTLIST pais codpais ID #REQUIRED>
+   <!ELEMENT ciudades (ciudad)*>
+      <!ELEMENT ciudad (#PCDATA)>
+         <!ATTLIST ciudad pais IDREF #IMPLIED>
+]>
+
+<geografia>
+   <paises>
+      <pais codpais="L1">Argentina</pais>
+      <pais codpais="L2">Austria</pais>
+      <pais codpais="L3">Japón</pais>
+      <pais codpais="L4">Noruega</pais>
+   </paises>
+   <ciudades>
+      <ciudad pais="L3">Osaka</ciudad>
+      <ciudad>Oslo</ciudad>
+      <ciudad pais="L3">Tokio</ciudad>
+      <ciudad pais="L2">Viena</ciudad>
+   </ciudades>
+</geografia>
